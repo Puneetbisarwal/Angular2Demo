@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+h1 {
+    color:#369;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size: 200%;
+}
+
+table {
+    color:#369;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size: large; 
+	border: 1px solid black;
+	border-collapse: collapse;
+	font-style: italic;
+}
+
+th, td {
+    border: 1px solid red;
+}
