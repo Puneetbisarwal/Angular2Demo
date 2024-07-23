@@ -10,5 +10,6 @@ export class EmployeeComponent {
     lastName: string = 'Kumar';
     gender: string = 'Male';
     age: number = 20;
+    address: string = 'Delhi';
   
 }
