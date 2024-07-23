@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-h1 {
+/*h1 {
     color:#369;
     font-family:Arial,Helvetica,sans-serif;
     font-size: 200%;
@@ -16,4 +16,18 @@ table {
 
 th, td {
     border: 1px solid red;
+}*/
+
+
+
+.boldClass{
+    font-weight: bold;
+}
+
+.italicsClass{
+    font-style: italic;
+}
+
+.colorClass{
+    color:red;
 }

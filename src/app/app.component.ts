@@ -4,26 +4,27 @@ import { Component } from '@angular/core';
   selector: 'app-root',
 /*templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']*/
-template: `<div>
-           <h1> {{getFullName()}} </h1>
-           <img src= 'https://www.pragimtech.com/wp-content/uploads/2019/{{imagePath}}'/>
-           <my-employee></my-employee>
-           <button [disabled] = 'isDisabled'> Click Me </button>
-           <span [innerHTML] = 'pageHeader'> </span>
-           <div [innerHTML] = 'badHtml'> </div>
-           </div>`
+  template: `<button [class.colorClass] = "applyColorClass" [class]= 'classesToApply'> My Button </button>
+            <br/> <br/>
+            <button class = "colorClass italicClass boldClass" [class.boldClass]= 'applyBoldClass'> My Button </button>
+            <br> <br>
+            <button class = "colorClass" [ngClass]= 'addClasses()'> My Button </button>
+            `
 
 })
 export class AppComponent {
-  pageHeader: string = ' Employee Details';
-  imagePath: string = '02/pargim-logo-1.png';
-  isDisabled: boolean = false;
-  badHtml: string = 'Hello <script> alert("Hacked");</script> World';
+  classesToApply:string = 'italicClass boldClass' ;
+  applyBoldClass: boolean = true;
+  applyItalicClass: boolean = false;
+  applyColorClass: boolean = false;
 
-  firstName: string = 'Vivek';
-  lasttName: string = 'Kumar';
+  addClasses() {
+    let classes = {
+      boldClass: this.applyBoldClass,
+      italicClass: this.applyItalicClass
+    };
 
-  getFullName(): string {
-    return this.firstName + ' ' + this.lasttName;
+    return classes;
   }
+  
 }
