@@ -4,27 +4,27 @@ import { Component } from '@angular/core';
   selector: 'app-root',
 /*templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']*/
-  template: `<button [class.colorClass] = "applyColorClass" [class]= 'classesToApply'> My Button </button>
+
+  template: `<button style='color:red' [style.font-weight] = "isBold ? 'bold' : 'normal'"> My Button </button>
             <br/> <br/>
-            <button class = "colorClass italicClass boldClass" [class.boldClass]= 'applyBoldClass'> My Button </button>
+            <button style = 'color:red' [style.font-size.px] = "fontSize"> My Button </button>
             <br> <br>
-            <button class = "colorClass" [ngClass]= 'addClasses()'> My Button </button>
+            <button style = 'color:red' [ngStyle]= "addStyles()"> My Button </button>
             `
 
 })
 export class AppComponent {
-  classesToApply:string = 'italicClass boldClass' ;
-  applyBoldClass: boolean = true;
-  applyItalicClass: boolean = false;
-  applyColorClass: boolean = false;
+  isBold: boolean = true;
+  fontSize: number = 30;
+  isItalic: boolean = true;
 
-  addClasses() {
-    let classes = {
-      boldClass: this.applyBoldClass,
-      italicClass: this.applyItalicClass
+  addStyles() {
+    let styles = {
+      'font-size.px': this.fontSize,
+      'font-style': this.isItalic ? 'italic' : 'normal',
+      'font-weight': this.isBold ? 'bold' : 'normal',
     };
-
-    return classes;
+    return styles;
   }
   
 }
