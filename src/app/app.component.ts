@@ -6,19 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']*/
 
   template: `
-            <div>
-              <button [disabled] = 'isDisabled'> Click Me </button>
-              <br>
-              <button disabled = '{{isDisabled}}'> Click Me Here </button>
-              <br>
-
-              <input id = 'inputId' type = 'text' value = 'Puneet'>
-            </div>
+            <my-employee> </my-employee> 
+            <br/> <br/>
+            <br> <br>
 
             `
 
 })
 export class AppComponent {
-  isDisabled: boolean = false;
+  onClick () : void {
+    console.log('Button Clicked');
+
+  }
 
 }
