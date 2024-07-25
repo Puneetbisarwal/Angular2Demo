@@ -10,3 +10,7 @@ table {
 th, td {
     border: 1px solid red;
 }
+
+thread {
+    border: 1px solid black;
+}

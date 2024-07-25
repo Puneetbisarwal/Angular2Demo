@@ -5,26 +5,20 @@ import { Component } from '@angular/core';
 /*templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']*/
 
-  template: `<button style='color:red' [style.font-weight] = "isBold ? 'bold' : 'normal'"> My Button </button>
-            <br/> <br/>
-            <button style = 'color:red' [style.font-size.px] = "fontSize"> My Button </button>
-            <br> <br>
-            <button style = 'color:red' [ngStyle]= "addStyles()"> My Button </button>
+  template: `
+            <div>
+              <button [disabled] = 'isDisabled'> Click Me </button>
+              <br>
+              <button disabled = '{{isDisabled}}'> Click Me Here </button>
+              <br>
+
+              <input id = 'inputId' type = 'text' value = 'Puneet'>
+            </div>
+
             `
 
 })
 export class AppComponent {
-  isBold: boolean = true;
-  fontSize: number = 30;
-  isItalic: boolean = true;
+  isDisabled: boolean = false;
 
-  addStyles() {
-    let styles = {
-      'font-size.px': this.fontSize,
-      'font-style': this.isItalic ? 'italic' : 'normal',
-      'font-weight': this.isBold ? 'bold' : 'normal',
-    };
-    return styles;
-  }
-  
 }
