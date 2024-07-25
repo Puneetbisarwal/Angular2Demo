@@ -2,21 +2,17 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-/*templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']*/
-
   template: `
-            <my-employee> </my-employee> 
+            Name : <input [(ngModel)] = 'name'/>
             <br/> <br/>
-            <br> <br>
+            You Entered : {{name}}
+            <br> <br>        
 
             `
 
 })
 export class AppComponent {
-  onClick () : void {
-    console.log('Button Clicked');
 
-  }
+  name: String = 'Rajat';
 
 }
