@@ -1,0 +1,17 @@
+table {
+    color:#369;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size: large; 
+	border: 1px solid black;
+	border-collapse: collapse;
+	font-style: italic;
+}
+
+th, td {
+    border: 1px solid red;
+    padding: 5px;
+}
+
+/* thread {
+    border: 1px solid black;
+} */
