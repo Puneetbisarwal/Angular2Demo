@@ -6,12 +6,33 @@ import { Component } from '@angular/core';
   styleUrls: ['./employeeList.component.css']
 })
 export class EmployeeListComponent {
-   employees: any[] = [
-    { code: 'Emp101', name: 'Akash', gender: 'Male', annualSalary: 5500, dateOfBirth: '25/06/1994' },
-    { code: 'Emp102', name: 'Vishal', gender: 'Male', annualSalary: 6900.95, dateOfBirth: '18/11/1995' },
-    { code: 'Emp103', name: 'Medha', gender: 'Female', annualSalary: 7500, dateOfBirth: '12/04/1994' },
-    { code: 'Emp104', name: 'Nimish', gender: 'Male', annualSalary: 6700.725, dateOfBirth: '20/01/1994' },
-    
-   ];
+
+  employees: any[];
+
+   constructor() { 
+    this.employees = [
+      { code: 'Emp101', name: 'Akash', gender: 'Male', annualSalary: 5500, dateOfBirth: '25/06/1994' },
+      { code: 'Emp102', name: 'Vishal', gender: 'Male', annualSalary: 6900.95, dateOfBirth: '18/11/1995' },
+      { code: 'Emp103', name: 'Medha', gender: 'Female', annualSalary: 7500, dateOfBirth: '12/04/1994' },
+      { code: 'Emp104', name: 'Nimish', gender: 'Male', annualSalary: 6700.725, dateOfBirth: '20/01/1994' },
+      
+     ];
+   
+  }
+
+  getEmployees(): void {
+    this.employees = [
+      { code: 'Emp101', name: 'Akash', gender: 'Male', annualSalary: 5500, dateOfBirth: '25/06/1994' },
+      { code: 'Emp102', name: 'Vishal', gender: 'Male', annualSalary: 6900.95, dateOfBirth: '18/11/1995' },
+      { code: 'Emp103', name: 'Medha', gender: 'Female', annualSalary: 7500, dateOfBirth: '12/04/1994' },
+      { code: 'Emp104', name: 'Nimish', gender: 'Male', annualSalary: 6700.725, dateOfBirth: '20/01/1994' },
+      { code: 'Emp105', name: 'Akshita', gender: 'Female', annualSalary: 6600.225, dateOfBirth: '12/01/1995' },
+      
+    ];
+  }
+
+  trackByEmpCode(index: number, employee: any): string {
+    return employee.code;
+  }
   
 }
