@@ -9,6 +9,9 @@ export class EmployeeListComponent {
 
   employees: any[];
 
+
+  selectedEmployeeCountRadioButtonButton: string = 'All';
+
    constructor() { 
     this.employees = [
       { code: 'Emp101', name: 'Akash', gender: 'Male', annualSalary: 5500, dateOfBirth: '06/25/1994' },
@@ -21,6 +24,11 @@ export class EmployeeListComponent {
       
      ];
    
+  }
+
+
+  onEmployeeCountRadioButtonChange(selectedRadioButtonValue : string): void {
+    this.selectedEmployeeCountRadioButtonButton = selectedRadioButtonValue;
   }
 
   getTotalEmployeesCount(): number {
